@@ -10,7 +10,7 @@
 
 } */
 
-export class ingredient{
+export class Ingredient{
 
   //same effect as before
   constructor(public name: string,public amount:number){
