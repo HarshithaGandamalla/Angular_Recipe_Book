@@ -1,11 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild,ElementRef } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
+import {ShoppingListEditComponent} from './shopping-list-edit/shopping-list-edit.component';
 @Component({
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
   styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent implements OnInit {
+
+  
+
 
   ingredients:Ingredient[] = [
      new Ingredient('Mango',5),
@@ -15,5 +19,9 @@ export class ShoppingListComponent implements OnInit {
 
   ngOnInit() {
   }
+
+    AddtoIngredients(newIngredient:Ingredient){
+       this.ingredients.push(newIngredient);
+    }
 
 }
